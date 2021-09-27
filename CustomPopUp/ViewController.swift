@@ -8,17 +8,32 @@
 import UIKit
 import WebKit
 
+let notificationName = "notificationBtnClicked"
+
 class ViewController: UIViewController, PopUpDelegate {
 
     @IBOutlet weak var myWebView: WKWebView!
     @IBOutlet weak var createPopUpBtn: UIButton!
     
+    deinit {
+        // 노티피케이션 수신기 해제
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // 노티피케이션 수신기 장착
+        NotificationCenter.default.addObserver(self, selector: #selector(loadWebView), name: NSNotification.Name(rawValue: notificationName), object: nil)
     }
 
-
+    @objc fileprivate func loadWebView() {
+        print("ViewController - loadWebView() called")
+        let myGitHubrl = URL(string: "https://github.com/seongmin-k")
+        self.myWebView.load(URLRequest(url: myGitHubrl!))
+    }
+    
     @IBAction func onCreatePopUpBtnClicked(_ sender: Any) {
         print("ViewController - onCreatePopUpBtnClicked() called")
         

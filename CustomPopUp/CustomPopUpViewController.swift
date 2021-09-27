@@ -11,6 +11,7 @@ class CustomPopUpViewController: UIViewController {
     
     @IBOutlet weak var bgBtn: UIButton!
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var githubBtn: UIButton!
     @IBOutlet weak var openChatBtn: UIButton!
     @IBOutlet weak var subscribeBtn: UIButton!
     
@@ -22,6 +23,7 @@ class CustomPopUpViewController: UIViewController {
         
         print("CustomPopUpViewController - viewDidLoad() called")
         contentView.layer.cornerRadius = 30
+        githubBtn.layer.cornerRadius = 10
         openChatBtn.layer.cornerRadius = 10
         subscribeBtn.layer.cornerRadius = 10
     }
@@ -45,6 +47,12 @@ class CustomPopUpViewController: UIViewController {
     @IBAction func onOpenChatBtnClicked(_ sender: UIButton) {
         print("CustomPopUpViewController - onOpenChatBtnClicked() called")
         myPopUpDelegate?.onOpenChatBtnClicked()
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func onGitHubBtnClicked(_ sender: UIButton) {
+        print("CustomPopUpViewController - onGitHubBtnClicked() called")
+        NotificationCenter.default.post(name: Notification.Name(rawValue: notificationName), object: nil)
         self.dismiss(animated: true, completion: nil)
     }
 }

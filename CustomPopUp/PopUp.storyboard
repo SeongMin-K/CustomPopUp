@@ -48,10 +48,25 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zBZ-OO-mmr">
-                                        <rect key="frame" x="65" y="298" width="120" height="74"/>
+                                        <rect key="frame" x="65" y="256" width="120" height="116"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ihf-Qd-uwy">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rvo-rm-bQv">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="32"/>
+                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="W6h-fn-mEP"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="GitHub">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="onGitHubBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="4MU-gn-syt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ihf-Qd-uwy">
+                                                <rect key="frame" x="0.0" y="42" width="120" height="32"/>
                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="jDA-N6-dki"/>
@@ -66,7 +81,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDm-bq-cqq">
-                                                <rect key="frame" x="0.0" y="42" width="120" height="32"/>
+                                                <rect key="frame" x="0.0" y="84" width="120" height="32"/>
                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="ZIa-jU-9Hu"/>
@@ -112,6 +127,7 @@
                     <connections>
                         <outlet property="bgBtn" destination="Vtq-zA-Ljq" id="TUx-sn-V63"/>
                         <outlet property="contentView" destination="4bR-dW-wJT" id="xri-Vc-adS"/>
+                        <outlet property="githubBtn" destination="Rvo-rm-bQv" id="5em-qy-lUr"/>
                         <outlet property="openChatBtn" destination="Ihf-Qd-uwy" id="yDE-ZU-pS0"/>
                         <outlet property="subscribeBtn" destination="hDm-bq-cqq" id="AoK-hM-tbb"/>
                     </connections>
@@ -125,6 +141,9 @@
         <image name="Shark" width="398" height="398.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
