@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, PopUpDelegate {
 
     @IBOutlet weak var myWebView: WKWebView!
     @IBOutlet weak var createPopUpBtn: UIButton!
@@ -39,8 +39,15 @@ class ViewController: UIViewController {
             let myChannelUrl = URL(string: "https://www.youtube.com/channel/UCg_pGaOuYAHvncmq2piUWAQ")
             self.myWebView.load(URLRequest(url: myChannelUrl!))
         }
-        
+        customPopUpVC.myPopUpDelegate = self
         self.present(customPopUpVC, animated: true, completion: nil)
+    }
+    
+    // Mark - PopUpDelegate methods
+    func onOpenChatBtnClicked() {
+        print("ViewController - onOpenchatBtnClicked() called")
+        let myOpenChatUrl = URL(string: "https://open.kakao.com/o/sqP7S3Bd")
+        self.myWebView.load(URLRequest(url: myOpenChatUrl!))
     }
 }
 

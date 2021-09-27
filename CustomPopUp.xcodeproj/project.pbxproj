@@ -16,6 +16,7 @@
 		3E6251452700625700D4EE52 /* PopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6251442700625700D4EE52 /* PopUp.storyboard */; };
 		3E6251472700647F00D4EE52 /* CustomPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6251462700647F00D4EE52 /* CustomPopUpViewController.swift */; };
 		3E62514A2700672D00D4EE52 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6251492700672D00D4EE52 /* WebKit.framework */; };
+		3EF9AB562701CC8D0012B869 /* PopUpDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9AB552701CC8D0012B869 /* PopUpDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		3E6251442700625700D4EE52 /* PopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopUp.storyboard; sourceTree = "<group>"; };
 		3E6251462700647F00D4EE52 /* CustomPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopUpViewController.swift; sourceTree = "<group>"; };
 		3E6251492700672D00D4EE52 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		3EF9AB552701CC8D0012B869 /* PopUpDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				3E6251392700619D00D4EE52 /* Assets.xcassets */,
 				3E62513B2700619D00D4EE52 /* LaunchScreen.storyboard */,
 				3E62513E2700619D00D4EE52 /* Info.plist */,
+				3EF9AB552701CC8D0012B869 /* PopUpDelegate.swift */,
 			);
 			path = CustomPopUp;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EF9AB562701CC8D0012B869 /* PopUpDelegate.swift in Sources */,
 				3E6251472700647F00D4EE52 /* CustomPopUpViewController.swift in Sources */,
 				3E6251352700619C00D4EE52 /* ViewController.swift in Sources */,
 				3E6251312700619C00D4EE52 /* AppDelegate.swift in Sources */,
